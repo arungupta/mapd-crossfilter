@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "webpack",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov -t $CODECOV_TOKEN",
     "test": "nyc npm run test:unit --",
     "test:unit": "mocha --require test/config.js test/"
   },
@@ -22,6 +23,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "chai": "^3.5.0",
     "chai-spies": "^0.7.1",
+    "codecov": "^2.1.0",
     "eslint": "^3.19.0",
     "mocha": "^3.2.0",
     "moment": "^2.18.1",
